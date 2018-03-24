@@ -1,0 +1,219 @@
+/*********************************************************
+ * large.css - CSS file for the Portfolio Project
+ * Associated query: width >= 1201px
+ *********************************************************/
+
+/* GENERAL CSS
+ * Rules to be applied to generic items, to ensure the correct behaviour of the specific ones.
+ */
+
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  min-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* HEADER box
+ * All the content in the header: logo, title and subtitle
+ */
+
+header {
+  border-bottom: 5px solid #7d97ad;
+  height: 150px;
+}
+
+header .logo {
+  float: left;
+}
+
+header .logo img {
+  height: 100px;
+  padding: 25px 40px;
+  width: auto;
+}
+
+header .flex-head {
+  display: flex;
+  flex-flow: column wrap;
+  float: right;
+  height: 150px;
+  justify-content: center;
+}
+
+header .head-title > * {
+  padding: 5px 40px;
+  text-align: right;
+}
+
+header .head-title .website {
+  font-size: 3em;
+}
+
+header .head-title .subtitle {
+  font-size: 1.5em;
+}
+
+/* MAIN content
+ * The boxes with the main infos and images
+ */
+
+main {
+  flex: 1 1 auto;
+  flex-flow: row;
+  display: flex;
+  padding: 50px;
+  width: auto;
+}
+
+main > section {
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* MAIN -> ABOUT ME
+ * Box containing the infos about the author
+ */
+
+.about-me {
+  background-image: url(../img/pattern.png);
+  background-repeat: repeat;
+  border: 5px solid #66ba86;
+  border-radius: 50px 0 0 50px;
+  border-right: 0;
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: row wrap;
+  width: 55%;
+}
+
+.about-me .avatar {
+  flex: 0 0 300px;
+  float: left;
+  height: 300px;
+  width: 300px;
+}
+
+.about-me .avatar img {
+  border: 5px solid white;
+  border-radius: 50%;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  margin: 50px;
+  width: 200px;
+}
+
+.about-me .motto {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  font-size: 1.5em;
+  font-style: italic;
+  justify-content: center;
+  max-height: 300px;
+  min-height: 300px;
+  padding: 0 25px;
+  text-align: center;
+  text-shadow: 1px 1px white;
+}
+
+.about-me .description {
+  font-size: 1.2em;
+  max-height: 350px;
+  padding: 0 50px;
+  width: 100%;
+  text-shadow: 1px 1px white;
+}
+
+/* MAIN -> PORTFOLIO
+ * List of projects
+ */
+
+.portfolio {
+  /*********************************************************
+   * Block generated with the Colorzilla gradient generator:
+   * http://www.colorzilla.com/gradient-editor/
+   */
+  background: rgb(220,251,210);
+  background: -moz-linear-gradient(-45deg, rgba(220,251,210,1) 0%, rgba(190,248,207,1) 55%, rgba(177,246,203,1) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(220,251,210,1) 0%,rgba(190,248,207,1) 55%,rgba(177,246,203,1) 100%);
+  background: linear-gradient(135deg, rgba(220,251,210,1) 0%,rgba(190,248,207,1) 55%,rgba(177,246,203,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#dcfbd2", endColorstr="#b1f6cb",GradientType=1 );
+  /*********************************************************/
+  border: 5px solid #66ba86;
+  border-radius: 0 50px 50px 0;
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 20px;
+  width: 45%;
+}
+
+.portfolio .project {
+  flex: 1 0 30%;
+  max-height: 40%;
+  max-width: 50%;
+  padding: 20px;
+}
+
+.portfolio .project .project-preview img {
+  border: 3px solid #66ba86;
+  border-radius: 10px;
+  box-shadow: 5px 5px rgba(102, 186, 134, 0.3);
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  position: relative;
+  -webkit-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  width: 100%;
+  z-index: 1;
+}
+
+.portfolio .project .project-name {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  top: -100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.portfolio .project .project-name a {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 1px 0px black, -1px 0px black, 0px 1px black, 0px -1px black;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  -webkit-transition: text-shadow 1s;
+  transition: text-shadow 1s;
+}
+
+/* Hover animations for PORTFOLIO */
+
+.portfolio .project:hover img {
+  box-shadow: none;
+  opacity: 0.5;
+}
+
+.portfolio .project:hover .project-name a {
+  color: black;
+  text-shadow: 1px 1px white;
+}

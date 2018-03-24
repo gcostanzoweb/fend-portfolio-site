@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+index.html - index for the Portfolio Project
+
+Author: Gabriele Costanzo
+Description: This is the front-page requested for the Portfolio Project.
+It uses a "flexbox inside flexbox" approach to ensure that boxes are responsive inside the page,
+and items are responsive inside boxes.
+
+The page follows a logical hierachy defined by classes as follows:
+
+body
+- header
+  - .logo
+  - .flex-head
+    - .head-title
+      - .website
+      - .subtitle
+- main
+  - .about-me
+    - .avatar
+    - .motto
+    - .description
+  - .portfolio
+    - .project
+      - .project-preview
+      - .project-name
+
+Additional credits:
+- Atle Mo for the background
+http://atle.co/
+- Colorzilla for the gradient generation
+http://www.colorzilla.com/gradient-editor/
+- The font used, "Lato", is a Google Font
+https://fonts.google.com/
+-->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="css/small.css">
+    <link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 1200px)" href="css/medium.css">
+    <link rel="stylesheet" media="screen and (min-width: 1201px)" href="css/large.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <meta name="author" content="Gabriele Costanzo">
+    <meta name="description" content="The portfolio for Gabriele Costanzo, an aspiring Web Developing professional!">
+    <title>Gabriele Costanzo - let's make the Web a beautiful place!</title>
+  </head>
+  <body>
+    <header>
+      <picture class="logo">
+        <source media="(max-width: 1200px)" srcset="img/resized/logo-med.png">
+        <img src="img/logo.png"/ alt="Logo for Gabriele Costanzo">
+      </picture>
+      <div class="flex-head">
+        <div class="head-title">
+          <h1 class="website">Gabriele Costanzo</h1>
+          <h3 class="subtitle">Coffee-powered Web Dev robot</h3>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="about-me">
+        <picture class="avatar">
+          <source media="(max-width: 600px)" srcset="img/resized/profile-small.png">
+          <img src="img/profile.png" alt="Profile picture of Gabriele Costanzo"/>
+        </picture>
+        <section class="motto">
+          <h2>"A Web Dev's job is to bring value and beauty to the web!"</h2>
+        </section>
+        <section class="description">
+          <p>I'm an aspiring <u>web developer</u>, IT engineering major in my hometown Catania, a sunny city in southern Italy.</br>
+          I started delving into pseudo-code and then proper coding in <u>HTML/CSS</u> back when I was just 10 as a game, when
+          having your own personal forum was a craze and you had to make it as cool as possible to show-off with your friends.</br>
+          Now I'm putting these <u>skills into practice</u>, and my dream is to <u>make the Web even more beautiful</u> with my works!</p>
+        </section>
+      </section>
+      <section class="portfolio">
+        <section class="project">
+          <picture class="project-preview">
+            <source media="(max-width: 600px)" srcset="img/projects/resized/1.png">
+            <img src="img/projects/1.png" alt="Project 1: Mockup to Article"/>
+          </picture>
+          <section class="project-name">
+            <a href="https://gcostanzoweb.github.io/udacity-google/1-mockup-to-article/index.html">Mockup to Article</a>
+          </section>
+        </section>
+        <section class="project">
+          <picture class="project-preview">
+            <source media="(max-width: 600px)" srcset="img/projects/resized/2.png">
+            <img src="img/projects/2.png" alt="Project 2: Animal Trading Card"/>
+          </picture>
+          <section class="project-name">
+            <a href="https://gcostanzoweb.github.io/udacity-google/2-fend-animal-trading-cards-master/card.html">Animal Trading Card</a>
+          </section>
+        </section>
+        <section class="project">
+          <picture class="project-preview">
+            <source media="(max-width: 600px)" srcset="img/projects/resized/3.png">
+            <img src="img/projects/3.png" alt="Project 3: Pixel Art Maker"/>
+          </picture>
+          <section class="project-name">
+            <a href="https://gcostanzoweb.github.io/udacity-google/3-project-pixel-art-maker-starter-master/index.html">Pixel Art Maker</a>
+          </section>
+        </section>
+        <section class="project">
+          <picture class="project-preview">
+            <source media="(max-width: 600px)" srcset="img/projects/resized/4.png">
+            <img src="img/projects/4.png" alt="Project 4: Tic Tac Toe"/>
+          </picture>
+          <section class="project-name">
+            <a href="https://gcostanzoweb.github.io/tictactoe/index.html">Tic Tac Toe</a>
+          </section>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
