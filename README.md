@@ -1,5 +1,7 @@
 # FEND Nanodegree "Portfolio Website" Project
-"Portfolio Website" project for the FEND Google Developer Nanodegree 
+"Portfolio Website" project for the FEND Google Developer Nanodegree
+
+Tools used and assets taken from other websites have been credited at the start of the index file.
 
 The code has been reviewed to respect the project's guidelines. 
 Responsiveness using the `flexbox` display method has been achieved in the following way:
